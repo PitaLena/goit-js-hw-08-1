@@ -1,0 +1,122 @@
+/* Стилі для кнопок модального вікна галереї */
+.modal-prev,
+.modal-next,
+.modal-close {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 8px #000;
+    z-index: 10;
+    padding: 0 8px;
+    line-height: 1;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.modal-prev {
+    left: calc(50vw - 48vw);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-next {
+    right: calc(50vw - 48vw);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-close {
+    right: calc(50vw - 48vw);
+    top: calc(50vh - 44vh);
+    z-index: 11;
+}
+
+.modal-prev:hover,
+.modal-next:hover,
+.modal-close:hover {
+    color: #ffe082;
+}
+
+/* Стилі для контейнера та зображення модального вікна галереї */
+.modal-gallery-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal-gallery-image {
+    max-width: 80vw;
+    max-height: 80vh;
+    display: block;
+    box-shadow: 0 2px 32px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+body {
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 24px;
+    max-width: 1128px;
+    margin: 80px auto 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.gallery-item {
+    box-sizing: border-box;
+}
+
+.gallery-link {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s;
+}
+
+.gallery-link:hover,
+.gallery-link:focus {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #d0cdcd;
+    transition: transform 0.2s;
+}
+
+.gallery-link:hover .gallery-image,
+.gallery-link:focus .gallery-image {
+    transform: scale(1.03);
+}
+
+.gallery {
+    /* Відступи для центрування */
+    box-sizing: border-box;
+}
+
+/* Сірий заголовок */
+h1,
+.gallery-title {
+    color: #bdbdbd;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-left: 40px;
+    margin-top: 40px;
+}
